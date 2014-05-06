@@ -1,0 +1,57 @@
+<style>
+/* purple and gold specific :( */
+	label.radio-shield-label {
+		font-weight: normal;
+		margin: 0 0 18px;
+		color: #685C53;
+	}
+	label.radio-shield-label:hover {
+		color: #6DC6E7;
+	}
+	label[for^="PurpleOrGold0"].radio-shield-label.activeLabel {
+		color: #592041;
+	}
+	label[for^="PurpleOrGold1"].radio-shield-label.activeLabel {
+		color: #D69D00;
+	}
+/*common form style goodness*/
+	label em {
+		font-weight: normal;
+		color: #685C53;
+	}
+	label + input.radio {
+		margin-left: 10px;
+	}
+	.rsformProgressContainer{
+		border: solid 1px #592041;
+	}
+	.rsformProgressBar{
+		background: #D69D00;
+	}
+	input[type="button"] + input[type="button"]{
+		margin-left: 6px;
+	}
+	input[type="button"] + input[type="submit"]{
+		margin-left: 6px;
+	}
+	.btnCal.rsform-calendar-button{
+		background: #c79316;
+		color: #ffffff;
+		display: inline-block;
+		padding: 4px 5px;
+		border: none;
+		font-weight: bold;
+		margin: 0 5px;
+	}
+	.rsform-calendar-box{
+		background: #EFECEA;
+		padding: 4px 3px;
+		border: 0 none rgba(0, 0, 0, 0);
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	.selectbox{
+		width: 100%;
+	}
+</style>
