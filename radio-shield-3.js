@@ -1,11 +1,11 @@
 <script>// radio shield 3a
-// yet another fork (branch?) of radio-shield.js // adding a more noticible highlight on click
+// yet another fork (branch?) of radio-shield.js // adding hover and addtional clicked state / styles
 $(document).ready(function(){
 	var radioShield = {};
 	
 //	radio shield
 	$('input[id^="PurpleOrGold"]').hide();
-	$('label[for^="PurpleOrGold"]').addClass('h3');
+	$('label[for^="PurpleOrGold"]').addClass('fs22').addClass('georgia').addClass('radio-shield-label');
 	$('.formRequired').eq(0).hide(); // -- this may need to be adjusted -- this is hiding the first required things requirement label (*), i'm assuming the shield radios are the first required on the page,
 
 	$('label[for^="PurpleOrGold"]').css({
@@ -21,6 +21,7 @@ $(document).ready(function(){
 			$(this).css({
 				'background-position': '0 -26px'
 			});
+//		$(this).css({'color': '#6DC6E7'}); //a
 		}
 	});
 	$('label[for^="PurpleOrGold"]').on('mouseout', function(){
@@ -28,6 +29,7 @@ $(document).ready(function(){
 			$(this).css({
 				'background-position': '0 0px'
 			});
+		//$(this).css({'color': '#685C53'}); //a
 		}
 	});
 
@@ -40,34 +42,13 @@ $(document).ready(function(){
 		$(this).css({
 			'background-position': '0 -52px'
 		}).addClass('activeLabel');
+
+		//$(this).css({});
 		
-		radioShield.clickedLink = $(this).attr('for');
+		radioShield.clickedLink = $(this).attr('for'); //not used??
 		$(this).prev().attr('checked', 'checked');
 	});//on click
 //	/radio shield
-
-// Purple and Gold Specific
-$('label[for=\"PurpleOrGold1\"]').css({'color': '#D69D00'});
-/*
-// default - #685C53
-$('label[for^=\"PurpleOrGold\"]').css({'color': '#685C53'});
-
-// purple - #592041
-$('label[for=\"PurpleOrGold0\"]').on('mouseenter', function(){
-	$(this).css({'color': '#592041'});
-});
-$('label[for=\"PurpleOrGold0\"]').on('mouseout', function(){
-	$(this).css({'color': '#685C53'});
-});
-// gold - #D69D00
-$('label[for=\"PurpleOrGold1\"]').on('mouseenter', function(){
-	$(this).css({'color': '#D69D00'});
-});
-$('label[for=\"PurpleOrGold1\"]').on('mouseout', function(){
-	$(this).css({'color': '#685C53'});
-});
-*/
-// /Purple and Gold Specific
 
 
 }); //	/document ready
